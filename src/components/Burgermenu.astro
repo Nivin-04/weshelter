@@ -1,0 +1,61 @@
+<form class="menu">
+<input type="checkbox" id="checkbox" />
+<label for="checkbox" class="burger-menu">☰</label>
+<nav>
+        <ul>
+            <li><a href="">Få Hjælp</a></li>
+            <li><a href="">Blive Frivillig</a></li>
+            <li><a href="">Om Weshelter</a></li>
+            <li><a href="">Kontakt Os</a></li>
+        </ul>
+    </nav>
+</form>
+
+<style>
+ul li{
+        list-style: none;
+    }
+ul li a{
+        text-decoration: none;
+        color: var(--white-text);
+        background-color: blue;
+    }
+
+#checkbox{
+        display: none;
+    }
+
+.burger-menu{
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+    }
+
+nav ul {
+    display: none;
+    position: absolute;
+    width: calc(100% - 60px);
+    transform: translateX(-100%);
+    top: 10px; 
+    background-color: blue;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+
+#checkbox:checked + label + nav ul {
+    display: block;
+  }
+
+nav a {
+    padding: 3px 0 4px 5px; 
+    line-height: 2.5em;
+    width: 100%;
+    display: inline-block;
+  }
+
+</style>
