@@ -1,7 +1,11 @@
+---
+const { image, song, artist } = Astro.props;
+---
+
 <h1 class="symbol_text">Frivillige aktiviteter</h1>
 <section class="container">
   <div class="symbol_section">
-    <h3>YOGA</h3>
+    <h3 class="symbol_text">YOGA</h3>
     <img class="symbol" src="/yoga.png" alt="Image" />
     <p class="hover_text">
       Vil du bruge din yogafaglig baggrund til at gøre en forskel? Har du lyst
@@ -16,7 +20,7 @@
   </div>
 
   <div class="symbol_section">
-    <h3>AKTIVTETSKLUBBER</h3>
+    <h3 class="symbol_text">AKTIVTETSKLUBBER</h3>
     <img class="symbol" src="/excercise.png" alt="Image" />
     <p class="hover_text">
       I aktivitetsklubben mødes frivillige, hjemløse og socialt udsatte til
@@ -29,7 +33,7 @@
   </div>
 
   <div class="symbol_section">
-    <h3>NETVÆRKSVENNER</h3>
+    <h3 class="symbol_text">NETVÆRKSVENNER</h3>
     <img class="symbol" src="/image.jpg" alt="Image" />
     <p class="hover_text">
       Har du lyst til at gøre en forskel for et andet menneske, som ønsker sig
@@ -45,7 +49,7 @@
   </div>
 
   <div class="symbol_section">
-    <h3>DE SOCIALE MADKLUBBER</h3>
+    <h3 class="symbol_text">DE SOCIALE MADKLUBBER</h3>
     <img class="symbol" src="/cooking.png" alt="Image" />
     <p class="hover_text">
       I vores sociale madklubber laver du lækker mad i fællesskab med andre
@@ -57,7 +61,7 @@
   </div>
 
   <div class="symbol_section">
-    <h3>MØBELHJÆLP</h3>
+    <h3 class="symbol_text">MØBELHJÆLP</h3>
     <img class="symbol" src="/image.jpg" alt="Image" />
     <p class="hover_text">
       Vi modtager gerne donationer i form af herretøj og boligartikler, som vi
@@ -71,10 +75,9 @@
   </div>
 
   <div class="middle-line"></div>
-  <!-- Vertical middle line -->
 
   <div class="symbol_section">
-    <h3>ØKONOMI-RÅDGIVNING</h3>
+    <h3 class="symbol_text">ØKONOMI-RÅDGIVNING</h3>
     <img class="symbol" src="/coins.png" alt="Image" />
     <p class="hover_text">
       WeShelters økonomi- og gældsrådgivning tilbyder gratis og uvildig
@@ -88,7 +91,7 @@
   </div>
 
   <div class="symbol_section">
-    <h3>LGBT+</h3>
+    <h3 class="symbol_text">LGBT+</h3>
     <img class="symbol" src="/lgbt.png" alt="Image" />
     <p class="hover_text">
       Med støtte fra Oak Foundation Denmark skal WeShelter styrke mental sundhed
@@ -100,7 +103,7 @@
   </div>
 
   <div class="symbol_section">
-    <h3>PEER-TO-PEER</h3>
+    <h3 class="symbol_text">PEER-TO-PEER</h3>
     <img class="symbol" src="/image.jpg" alt="Image" />
     <p class="hover_text">
       Har du erfaring med hjemløshed? Og har du lyst til at gøre en forskel for
@@ -110,7 +113,7 @@
   </div>
 
   <div class="symbol_section">
-    <h3>MASSAGE</h3>
+    <h3 class="symbol_text">MASSAGE</h3>
     <img class="symbol" src="/image.jpg" alt="Image" />
     <p class="hover_text">
       Som frivillig massør kan du give udsatte mennesker ro, nærvær og øget
@@ -123,7 +126,7 @@
   </div>
 
   <div class="symbol_section">
-    <h3>LEDER</h3>
+    <h3 class="symbol_text">LEDER</h3>
     <img class="symbol" src="/image.jpg" alt="Image" />
     <p class="hover_text">
       Motiveres du af at skabe gode rammer, drive udviklingsprocesser, fremme
@@ -160,9 +163,9 @@
   }
 
   .symbol {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
     display: block;
     transition: opacity 0.5s ease-in-out;
   }
@@ -199,10 +202,10 @@
 
   .short-line {
     width: 50%;
-    height: 2px;
-    background: black;
     margin: 3rem auto;
     margin-bottom: 0%;
+    border: 2px dashed black;
+    border-radius: 5px;
   }
 
   .middle-line {
@@ -210,10 +213,10 @@
     left: 50%;
     top: 0;
     bottom: 0; /* Makes it stretch to the full height */
-    width: 2px;
-    background: black;
     transform: translateX(-50%);
     margin: 1rem;
+    border: 2px dashed black;
+    border-radius: 5px;
   }
 
   @media (max-width: 767px) {
