@@ -1,7 +1,3 @@
----
-const { image, song, artist } = Astro.props;
----
-
 <h1 class="symbol_text">Frivillige aktiviteter</h1>
 <section class="container">
   <div class="symbol_section">
@@ -34,7 +30,7 @@ const { image, song, artist } = Astro.props;
 
   <div class="symbol_section">
     <h3 class="symbol_text">NETVÆRKSVENNER</h3>
-    <img class="symbol" src="/image.jpg" alt="Image" />
+    <img class="symbol" src="/internet.png" alt="Image" />
     <p class="hover_text">
       Har du lyst til at gøre en forskel for et andet menneske, som ønsker sig
       mere netværk og oplevelser i hverdagen? Som frivillig netværksven i
@@ -62,7 +58,7 @@ const { image, song, artist } = Astro.props;
 
   <div class="symbol_section">
     <h3 class="symbol_text">MØBELHJÆLP</h3>
-    <img class="symbol" src="/image.jpg" alt="Image" />
+    <img class="symbol" src="/furniture.png" alt="Image" />
     <p class="hover_text">
       Vi modtager gerne donationer i form af herretøj og boligartikler, som vi
       giver videre til herbergsbeboere og hjemløse, der flytter i egen bolig.
@@ -104,7 +100,7 @@ const { image, song, artist } = Astro.props;
 
   <div class="symbol_section">
     <h3 class="symbol_text">PEER-TO-PEER</h3>
-    <img class="symbol" src="/image.jpg" alt="Image" />
+    <img class="symbol" src="/peer.png" alt="Image" />
     <p class="hover_text">
       Har du erfaring med hjemløshed? Og har du lyst til at gøre en forskel for
       andre, der står i en vanskelig situation? Så har vi brug for dig!
@@ -114,7 +110,7 @@ const { image, song, artist } = Astro.props;
 
   <div class="symbol_section">
     <h3 class="symbol_text">MASSAGE</h3>
-    <img class="symbol" src="/image.jpg" alt="Image" />
+    <img class="symbol" src="/massage.png" alt="Image" />
     <p class="hover_text">
       Som frivillig massør kan du give udsatte mennesker ro, nærvær og øget
       kropsbevidsthed. Hjemløse og socialt udsatte lever ofte isolerede liv,
@@ -123,15 +119,17 @@ const { image, song, artist } = Astro.props;
       krop og sind. Derfor tilbyder vi gratis massage på vores herberger og
       væresteder.
     </p>
+    <div class="short-line"></div>
   </div>
 
   <div class="symbol_section">
     <h3 class="symbol_text">LEDER</h3>
-    <img class="symbol" src="/image.jpg" alt="Image" />
+    <img class="symbol" src="/leader.png" alt="Image" />
     <p class="hover_text">
       Motiveres du af at skabe gode rammer, drive udviklingsprocesser, fremme
       samarbejde og koordinere aktiviteter? Så bliv frivillig leder i WeShelter!
     </p>
+    <div class="short-line"></div>
   </div>
 </section>
 
@@ -268,10 +266,10 @@ const { image, song, artist } = Astro.props;
     /* Horizontal line */
     .short-line {
       width: 100%;
-      height: 2px;
-      background: black;
       margin: 2rem auto;
       margin-bottom: 0%;
+      border: 2px dashed black;
+      border-radius: 5px;
     }
 
     .middle-line {
