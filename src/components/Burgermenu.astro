@@ -4,7 +4,7 @@
 <nav>
         <ul>
             <li><a href="">Få Hjælp</a></li>
-            <li><a href="">Blive Frivillig</a></li>
+            <li><a href="">Bliv Frivillig</a></li>
             <li><a href="">Om Weshelter</a></li>
             <li><a href="">Kontakt Os</a></li>
         </ul>
@@ -12,14 +12,6 @@
 </form>
 
 <style>
-ul li{
-        list-style: none;
-    }
-ul li a{
-        text-decoration: none;
-        color: var(--white-text);
-        background-color: blue;
-    }
 
 #checkbox{
         display: none;
@@ -29,33 +21,68 @@ ul li a{
         cursor: pointer;
         display: inline-block;
         position: relative;
-    }
 
+    }
 nav ul {
-    display: none;
-    position: absolute;
-    width: calc(100% - 60px);
-    transform: translateX(-100%);
-    top: 10px; 
-    background-color: blue;
-    padding: 10px;
-}
+        display: none;
+        position: absolute;
+        width: calc(100% - 60px);
+        transform: translateX(-100%);
+        top: 10px; 
+        background-color: white;
+        padding: 10px;
+    }
+ul li{
+        list-style: none;
+    }
+ul li a{
+        text-decoration: none;
+        color: black;
+        background-color: white;
+        text-align: center;
+        padding: 3px 0 4px 5px; 
+        line-height: 2.5em;
+        width: 100%;
+        display: inline-block;
+        font-family: var(--font);
+      }
+
 
 nav ul li a:hover {
-  background-color: #fff;
-  color: #333;
+  background-color: var(--blue);
+  color: var(--white);
 }
-
 
 #checkbox:checked + label + nav ul {
     display: block;
+    z-index: 3;
   }
 
-nav a {
-    padding: 3px 0 4px 5px; 
-    line-height: 2.5em;
-    width: 100%;
-    display: inline-block;
-  }
+
+  @media (min-width: 700px) {
+    .burger-menu{
+        display: none;
+    }
+   nav ul{
+    display: flex;
+    justify-content: end;
+    position: relative;
+   gap: 2em;
+    
+   }
+
+   nav ul li{
+    display: inline;
+    text-wrap: nowrap;
+    display: flex;
+   
+   }
+
+   nav ul li a:hover {
+  background-color: var(--white);
+  color: var(--blue);
+}
+}
+
 
 </style>
