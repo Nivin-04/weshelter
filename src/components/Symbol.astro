@@ -1,5 +1,5 @@
+<h1 class="symbol_text">Frivillige aktiviteter</h1>
 <section class="container">
-  <h2>Frivillige aktiviteter</h2>
   <div class="symbol_section">
     <h3>YOGA</h3>
     <img class="symbol" src="/image.jpg" alt="Image" />
@@ -12,9 +12,8 @@
       frivillige yogaundervisere, fordelt over fire tilbud og vi får brug for
       endnu flere.
     </p>
+    <div class="short-line"></div>
   </div>
-  <hr />
-  <!-- This is the horizontal line -->
 
   <div class="symbol_section">
     <h3>AKTIVTETSKLUBBER</h3>
@@ -26,9 +25,9 @@
       kan være med. Det foregår i et inkluderende og fordomsfrit fællesskab,
       hvor man kan deltage i samtaler eller blot nyde selskabet.
     </p>
+    <div class="short-line"></div>
   </div>
-  <hr />
-  <!-- This is the horizontal line -->
+
   <div class="symbol_section">
     <h3>NETVÆRKSVENNER</h3>
     <img class="symbol" src="/image.jpg" alt="Image" />
@@ -42,9 +41,9 @@
       blandt andet gennem sociale aktiviteter drevet af frivillige – og du kan
       være med!
     </p>
+    <div class="short-line"></div>
   </div>
-  <hr />
-  <!-- This is the horizontal line -->
+
   <div class="symbol_section">
     <h3>DE SOCIALE MADKLUBBER</h3>
     <img class="symbol" src="/image.jpg" alt="Image" />
@@ -54,9 +53,9 @@
       væresteder. Her laver frivillige og brugere/beboere i fællesskab lækker og
       næringsrig mad, der passer til små budgetter.
     </p>
+    <div class="short-line"></div>
   </div>
-  <hr />
-  <!-- This is the horizontal line -->
+
   <div class="symbol_section">
     <h3>MØBELHJÆLP</h3>
     <img class="symbol" src="/image.jpg" alt="Image" />
@@ -68,9 +67,12 @@
       Så tager vi gerne imod det og formidler det videre til beboerne på vores
       herberger, og hjemløse, der står til at skulle flytte i egen bolig.
     </p>
+    <div class="short-line"></div>
   </div>
-  <hr />
-  <!-- This is the horizontal line -->
+
+  <div class="middle-line"></div>
+  <!-- Vertical middle line -->
+
   <div class="symbol_section">
     <h3>ØKONOMI-RÅDGIVNING</h3>
     <img class="symbol" src="/image.jpg" alt="Image" />
@@ -82,9 +84,9 @@
       brugerinddragelse og læring, og at vores rådsøgende får viden og redskaber
       til selv at kunne håndtere og overskue deres økonomi.
     </p>
+    <div class="short-line"></div>
   </div>
-  <hr />
-  <!-- This is the horizontal line -->
+
   <div class="symbol_section">
     <h3>LGBT+</h3>
     <img class="symbol" src="/image.jpg" alt="Image" />
@@ -94,9 +96,9 @@
       fællesskaber og etableringen af et netværk for fagpersoner samt et panel
       med udsatte LGBT+ personer.
     </p>
+    <div class="short-line"></div>
   </div>
-  <hr />
-  <!-- This is the horizontal line -->
+
   <div class="symbol_section">
     <h3>PEER-TO-PEER</h3>
     <img class="symbol" src="/image.jpg" alt="Image" />
@@ -104,9 +106,9 @@
       Har du erfaring med hjemløshed? Og har du lyst til at gøre en forskel for
       andre, der står i en vanskelig situation? Så har vi brug for dig!
     </p>
+    <div class="short-line"></div>
   </div>
-  <hr />
-  <!-- This is the horizontal line -->
+
   <div class="symbol_section">
     <h3>MASSAGE</h3>
     <img class="symbol" src="/image.jpg" alt="Image" />
@@ -119,8 +121,7 @@
       væresteder.
     </p>
   </div>
-  <hr />
-  <!-- This is the horizontal line -->
+
   <div class="symbol_section">
     <h3>LEDER</h3>
     <img class="symbol" src="/image.jpg" alt="Image" />
@@ -132,12 +133,94 @@
 </section>
 
 <style>
+  .symbol_text {
+    font-family: var(--font);
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    font-family: var(--font);
+  }
+
+  .symbol_section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 2rem;
+  }
+
+  .symbol {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .hover_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .hover_text p {
+    text-size-adjust: 50px;
+  }
+
+  /* Hover Effect */
+  .symbol_section:hover .symbol {
+    opacity: 0;
+  }
+
+  .symbol_section:hover .hover_text {
+    opacity: 1;
+  }
+
+  /* Line  */
+
+  .short-line {
+    width: 50%;
+    height: 2px;
+    background: black;
+    margin: 3rem auto;
+    margin-bottom: 0%;
+  }
+
+  .middle-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0; /* Makes it stretch to the full height */
+    width: 2px;
+    background: black;
+    transform: translateX(-50%);
+    margin: 1rem;
+  }
+
   @media (max-width: 767px) {
     .container {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin: 2rem;
       font-family: var(--font);
     }
 
@@ -147,6 +230,7 @@
       cursor: pointer;
       width: 300px;
       text-align: center;
+      margin: 10px;
     }
 
     .symbol {
@@ -179,12 +263,16 @@
     }
 
     /* Horizontal line */
-    hr {
-      width: 319px;
+    .short-line {
+      width: 100%;
       height: 2px;
-      flex-shrink: 0;
-      border-top: 2px dashed #333;
-      margin: 20px 0;
+      background: black;
+      margin: 2rem auto;
+      margin-bottom: 0%;
+    }
+
+    .middle-line {
+      display: none;
     }
   }
 </style>
