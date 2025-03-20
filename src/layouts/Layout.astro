@@ -1,42 +1,35 @@
 ---
-import "../css/variables.css"
-import CTA from "../components/Cta.astro"
-import Burgermenu from "../components/Burgermenu.astro"
-
+import "../css/variables.css";
+import CTA from "../components/Cta.astro";
+import Burgermenu from "../components/Burgermenu.astro";
 ---
-
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<header>
-			<CTA />
-			<Burgermenu />
-		</header>
-		<main>
-			<slot />
-		</main>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro Basics</title>
+  </head>
+  <body>
+    <header>
+      <CTA />
+      <Burgermenu />
+    </header>
+    <main>
+      <slot />
+    </main>
+  </body>
 </html>
 
-
-
 <style>
-	header{
-		display: flex;
-		justify-content: space-between;
-		text-align: center;
-		align-items: center;
-		margin: 2em 2em 1em 0;
-	}
-
-	
-	
+  header {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    margin: 2em 2em 1em 0;
+  }
 </style>
