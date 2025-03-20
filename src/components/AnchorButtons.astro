@@ -1,5 +1,4 @@
 <section>
-    <hr>
     <div class="going_places">
         <a href="">Frivillige Aktiviteter</a>
         <a href="">Bliv Frivillig</a>
@@ -11,6 +10,7 @@
     section{
         display: flex;
         flex-direction: column;
+        transform: translateY(20cqw);
     }
 
     hr{
@@ -30,4 +30,13 @@
         font-weight: bold;
         font-family: var(--font);
     }
+    
+    @media (min-width: 995px) {
+
+        section{
+            transform: translateY(0);
+        }
+        
+    }
+
 </style>
