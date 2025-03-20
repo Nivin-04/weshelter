@@ -1,0 +1,42 @@
+<section>
+    <div class="going_places">
+        <a href="">Frivillige Aktiviteter</a>
+        <a href="">Bliv Frivillig</a>
+    </div>
+</section>
+
+
+<style>
+    section{
+        display: flex;
+        flex-direction: column;
+        transform: translateY(20cqw);
+    }
+
+    hr{
+        color: black;
+        display: block;
+    }
+
+    .going_places{
+        display: flex;
+        justify-content: space-evenly;
+        margin: 2em;
+    }
+
+    a{
+        text-decoration: none;
+        font-size: larger;
+        font-weight: bold;
+        font-family: var(--font);
+    }
+    
+    @media (min-width: 995px) {
+
+        section{
+            transform: translateY(0);
+        }
+        
+    }
+
+</style>
