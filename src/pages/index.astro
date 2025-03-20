@@ -1,12 +1,28 @@
 ---
 import Postkort from "../components/Postkort.astro";
-import Welcome from "../components/Welcome.astro";
-import Layout from "../layouts/Layout.astro";
 import Footer from "../components/Footer.astro";
+
+
+import Symbol from "../components/Symbol.astro";
+import FirstBlueSection from "../components/first-blue-section.astro";
+import SecondBlueSection from "../components/second-blue-section.astro";
+
+import Layout from '../layouts/Layout.astro';
+import CTA from '../components/Cta.astro';
+import Hero from "../components/Hero.astro"
+import GoingPlaces from "../components/AnchorButtons.astro"
+
+
 ---
 
 <Layout>
-  <h2>BLIV FRIVILLIG</h2>
+    <Hero />
+    <GoingPlaces />
+    <FirstBlueSection />
+  <Symbol /> 
+  <SecondBlueSection />
+   <h2>BLIV FRIVILLIG</h2>
   <Postkort />
   <Footer />
+
 </Layout>
