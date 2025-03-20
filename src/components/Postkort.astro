@@ -1,0 +1,198 @@
+---
+const {} = Astro.props;
+---
+
+<form action="formgrid" class="formgrid">
+  <fieldset class="grid_1-1">
+    <img src="/frimerk.png" alt="frimærke" class="stamp" />
+    <h3>Hvad kunne du tænke dig, at hjælpe til med? *</h3>
+    <div class="leftcolumn">
+      <div>
+        <input type="checkbox" /> De sociale madklubber
+      </div>
+      <div>
+        <input type="checkbox" /> Økonimirådgivningen
+      </div>
+      <div>
+        <input type="checkbox" /> Aktivitetsklubber
+      </div>
+      <div>
+        <input type="checkbox" /> Ledelse af en aktivitet
+      </div>
+      <div>
+        <input type="checkbox" /> Møbelhjælp
+      </div>
+      <div>
+        <input type="checkbox" /> Jeg vil bare høre mere
+      </div>
+    </div>
+    <div class="rightcolumn">
+      <div>
+        <input type="checkbox" /> Netværksvenner
+      </div>
+      <div>
+        <input type="checkbox" /> Peer-to-peer
+      </div>
+      <div>
+        <input type="checkbox" /> LGBT+ venner
+      </div>
+      <div>
+        <input type="checkbox" /> Yoga
+      </div>
+      <div>
+        <input type="checkbox" /> Massage
+      </div>
+    </div>
+    <!-- </fieldset> -->
+    <hr class="linje" />
+    <!-- <fieldset> -->
+    <div class="postcardright">
+      <label for="name"></label>
+      <input type="text" id="name" placeholder="Navn" class="input-box" />
+      <label for="name"></label>
+      <input type="text" id="name" placeholder="E-mail" class="input-box" />
+      <label for="name"></label>
+      <input type="text" id="name" placeholder="Postnummer" class="input-box" />
+      <label for="name"></label>
+      <input type="text" id="name" placeholder="Telefon-nummer" class="input-box" />
+    </div>
+    <div class="knap_container">
+      <button class="knap">VIDERE</button>
+    </div>
+  </fieldset>
+  
+</form>
+
+<style>
+  .formgrid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .stamp {
+    display: none;
+  }
+
+  .grid_1-1 {
+    display: grid;
+    padding: 5px;
+    font-size: 17px;
+  }
+
+  .grid_1-1,
+  h3 {
+    grid-column: 1 / 3;
+  }
+
+  .leftcolumn {
+    display: grid;
+    gap: 10px;
+    grid-column: 1 / 2;
+  }
+  .rightcolumn {
+    display: grid;
+
+    grid-column: 2 / 3;
+  }
+
+  .postcardright {
+    display: grid;
+    grid-column: 1 / 3;
+  }
+
+  .input-box {
+    padding: 8px;
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+    font-size: 20px;
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  input[type="checkbox"] {
+    transform: scale(1.2);
+  }
+  .input-box:focus {
+    border-bottom: 2px solid rgb(4, 4, 4); /* Ændrer farve ved fokus */
+  }
+
+  .linje {
+    display: grid;
+    grid-column: 1 / 3;
+    color: black;
+    /* width: 380px; */
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .knap {
+    display: grid;
+    grid-column: 1 / 3;
+    background-color: blue;
+    border-radius: 20px;
+    font-size: 30px;
+    width: 200px;
+    color: white;
+    padding: 0.5rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  .knap_container {
+    grid-column: 1 / 3;
+    padding: 20px;
+    place-self: center;
+  }
+  .knap:hover {
+    transform: scale(1.02);
+    transition: 0.3s;
+  }
+
+  @media (min-width: 800px) {
+    .formgrid {
+      display: grid;
+
+      justify-items: center;
+    }
+    .stamp {
+      display: grid;
+      width: 8vw;
+      height: 21vh;
+      grid-column: 4 / 5;
+      grid-row: 1 / 3;
+    }
+    .grid_1-1 {
+      grid-template-columns: 300px 200px 400px;
+      grid-column: 1 / 2;
+      width: 70vw;
+      height: 75vh;
+      /* padding: 50px; */
+    }
+
+    .rightcolumn {
+      grid-row: 2 / 3;
+      padding: 20px;
+    }
+    .leftcolumn {
+      padding: 20px;
+    }
+
+    .postcardright {
+      grid-column: 3 / 4;
+      grid-row: 2 / 3;
+      justify-content: center;
+      padding: 50px;
+    }
+    .knap_container {
+      grid-column: 3 / 4;
+    }
+    .linje {
+      display:;
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      margin-top: -6px;
+      margin-bottom: -40px;
+      margin-right: 10px;
+    }
+  }
+</style>

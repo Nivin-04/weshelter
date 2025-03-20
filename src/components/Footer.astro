@@ -1,0 +1,122 @@
+---
+const {} = Astro.props;
+---
+
+<footer>
+  <div class="kort">
+    <img src="/map.png" alt="kort" />
+  </div>
+  <section class="footer_info">
+    <div class="tekst_venstre">
+      <p>
+        <strong>WeShelter</strong> arbejder for at give hjemløse og udsatte bedre vilkår. Målet er at gøre op med hjemløshed, ensomhed og psykisk mistrivsel. Arbejdet sker på herberger, væresteder og i frivillige indsatser. WeShelter er en del af Fonden
+        Missionen blandt Hjemløse.
+      </p>
+    </div>
+    <div class="tekst_midten">
+      <div>
+        <h3>Lokation</h3>
+        <p>
+          Slotsgade 2, 1sal <br />
+          2200, <br /> København. N
+        </p>
+      </div>
+      <div>
+        <h3>Åbningstider</h3>
+        <p>Alle dage - 09:00 - 22:00</p>
+      </div>
+    </div>
+    <div class="tekst_hojre">
+      <div>
+        <h3>Kontakt</h3>
+        <p>
+          <strong>Email:</strong> kontakt@weshelter.dk <br /><strong>Tlf. nummer:</strong> +45 36 16 11 13 <br />Cvr. 80968515
+        </p>
+      </div>
+      <div class="so_me">
+        <a href="https://www.facebook.com/WeShelter/?locale=da_DK">Facebook</a>
+        <a href="https://www.instagram.com/weshelter/">Instagram</a>
+        <a href="https://x.com/Hjemlosdk?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">Twitter</a>
+        <a href="https://dk.linkedin.com/company/weshelter">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+</footer>
+
+<style>
+  main {
+  }
+  footer {
+    margin-top: 50px;
+    background-color: rgb(5, 5, 85);
+  }
+  .kort {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    width: 100%;
+  }
+  .kort img {
+    width: 90vw;
+  }
+  .footer_info {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .tekst_venstre {
+    display: grid;
+    color: aliceblue;
+    width: 38ch;
+    word-wrap: break-word;
+    place-self: center;
+    font-size: 19px;
+    padding: 10px;
+  }
+  .tekst_midten {
+    display: grid;
+    text-align: center;
+    color: aliceblue;
+    padding: 20px;
+    font-size: 19px;
+  }
+  .tekst_midten h3 {
+    font-size: 40px;
+  }
+  .tekst_hojre {
+    display: flex;
+    color: aliceblue;
+    padding: 20px;
+    font-size: 19px;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .tekst_hojre h3 {
+    font-size: 40px;
+  }
+
+  .so_me {
+    display: grid;
+
+    gap: 0.3rem;
+    font-size: 25px;
+    text-align: left;
+  }
+
+  a {
+    text-decoration: none;
+    color: aliceblue;
+  }
+  @media (min-width: 800px) {
+    .footer_info {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    .tekst_venstre {
+      margin-top: -50px;
+      line-height: 2rem;
+    }
+  }
+</style>
