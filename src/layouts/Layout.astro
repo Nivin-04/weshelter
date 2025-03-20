@@ -1,34 +1,31 @@
 ---
-import "../css/variables.css"
-import CTA from "../components/Cta.astro"
-import Burgermenu from "../components/Burgermenu.astro"
-
+import "../css/variables.css";
+import CTA from "../components/Cta.astro";
+import Burgermenu from "../components/Burgermenu.astro";
 ---
-
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<header>
-			<CTA />
-			<Burgermenu />
-		</header>
-		<main>
-			<slot />
-		</main>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro Basics</title>
+  </head>
+  <body>
+    <header>
+      <CTA />
+      <Burgermenu />
+    </header>
+    <main>
+      <slot />
+    </main>
+  </body>
 </html>
 
-
-
 <style>
+
 	body{
 		font-family: var(--font);
 		margin: 0%;
@@ -41,6 +38,4 @@ import Burgermenu from "../components/Burgermenu.astro"
 		margin: 2em 2em 1em 0;
 	}
 
-	
-	
 </style>
